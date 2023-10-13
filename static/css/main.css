@@ -6,7 +6,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     background-color: #f0f8ff;
     font-size: 16px;
     letter-spacing: 1.5px;
@@ -58,6 +57,8 @@ ul {
 /*
     || FLEXBOX
 */
+
+@media only screen and (min-width: 600px) {
 .d-flex {
     display: flex;
 }
@@ -86,7 +87,7 @@ ul {
 .flex-justify-around {
     justify-content: space-around;
 }
-
+}
 
 /*
     || LANDING PAGE
@@ -124,10 +125,7 @@ ul {
         text-align: center;
     }
 
-    .header h2 {
-        font-weight: 400;
-        text-align: center;
-    }
+    /* / */
 
     .header p {
         font-weight: 400;
@@ -151,7 +149,8 @@ ul {
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
-    text-align: center
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 /* 
@@ -244,6 +243,29 @@ td.value {
     .flex-column-narrow {
         width: 100%;
     }
+
+    /* RESUME */
+    .header {
+        padding: 80px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .header .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .resume-content .resume-content-block {
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+
+    .bottomcorner {
+        bottom: 0;
+        right: 0;
+    }
+   
+
 }
 
 /*
