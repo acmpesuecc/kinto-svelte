@@ -6,11 +6,12 @@
     <link rel="stylesheet" type="text/css" href="css/css_reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kinto behr</title>
 </head>
 <body>
     <div class="l-runway d-flex flex-column flex-justify-center">
-        <div class="d-flex flex-row flex-start">
+        <div class="d-flex flex-row flex-start flex-justify-center">
             <div class="l-lane d-flex flex-column flex-justify-center">
                 <h1 id="title">about</h1>
             </div>
