@@ -50,7 +50,7 @@
     </div>
     <script src="fades.js"></script>
 
-    <script>
+    <!-- <script>
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle("dark-mode");
@@ -59,6 +59,23 @@
             if (body.classList.contains("dark-mode")) {
                 linkElement.href = "css/dark.css";
             } else {
+                linkElement.href = "css/main.css";
+            }
+        }
+
+        document.getElementById("toggleDarkMode").addEventListener("click", toggleDarkMode);
+    </script> -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const linkElement = document.getElementById("modeStylesheet");
+            if (localStorage.getItem("darkMode") == "Off") {
+                localStorage.setItem("darkMode", "On")
+                linkElement.href = "css/dark.css";
+            } else {
+                localStorage.setItem("darkMode", "Off")
                 linkElement.href = "css/main.css";
             }
         }

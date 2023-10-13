@@ -1,3 +1,8 @@
+<script>
+
+  import { loop_guard } from "svelte/internal";
+
+</script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -13,6 +18,9 @@
     <div>
         <button id="toggleDarkMode">Toggle Dark Mode</button>
     </div>
+    <script>
+        import globalStore from "./store.js";
+        </script>
 
     <div class="l-runway d-flex flex-column flex-justify-center">
         <div class="d-flex flex-row flex-start">
@@ -30,21 +38,24 @@
 
     
 
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle("dark-mode");
-
-            const linkElement = document.getElementById("modeStylesheet");
-            if (body.classList.contains("dark-mode")) {
-                linkElement.href = "css/dark.css";
-            } else {
-                linkElement.href = "css/main.css";
+        <script>
+            function toggleDarkMode() {
+                const body = document.body;
+                body.classList.toggle("dark-mode");
+    
+                const linkElement = document.getElementById("modeStylesheet");
+                if (localStorage.getItem("darkMode") == "Off") {
+                    localStorage.setItem("darkMode", "On")
+                    linkElement.href = "css/dark.css";
+                } else {
+                    localStorage.setItem("darkMode", "Off")
+                    linkElement.href = "css/main.css";
+                }
             }
-        }
-
-        document.getElementById("toggleDarkMode").addEventListener("click", toggleDarkMode);
-    </script>
+    
+            document.getElementById("toggleDarkMode").addEventListener("click", toggleDarkMode);
+        </script>
+    
 
     <link id="modeStylesheet" rel="stylesheet" type="text/css" href="css/main.css">
 
