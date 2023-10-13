@@ -1,5 +1,5 @@
 <script>
-    let isDarkMode = false;
+    export let isDarkMode = false;
   
     function toggleDarkMode() {
       isDarkMode = !isDarkMode;
@@ -21,9 +21,3 @@
       Enable Dark Mode
     {/if}
 </button>
-
-{#if isDarkMode}
-  <link rel="stylesheet" type="text/css" href="dark-mode.css">
-{:else}
-  <link rel="stylesheet" type="text/css" href="light-mode.css">
-{/if}
