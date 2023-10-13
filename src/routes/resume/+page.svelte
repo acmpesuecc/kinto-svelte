@@ -10,6 +10,9 @@
     <title>kinto behr</title>
 </head>
 <body>
+    <div>
+        <button id="toggleDarkMode">Dark Mode</button>
+    </div>
     <div id="resume_download" class="bottomcorner">
         <a href="latex/resume.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -203,5 +206,24 @@
             </p>
         </div>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const linkElement = document.getElementById("modeStylesheet");
+            if (body.classList.contains("dark-mode")) {
+                linkElement.href = "css/dark.css";
+            } else {
+                linkElement.href = "css/main.css";
+            }
+        }
+
+        document.getElementById("toggleDarkMode").addEventListener("click", toggleDarkMode);
+    </script>
+    
+    <link id="modeStylesheet" rel="stylesheet" type="text/css" href="css/main.css">
+
 </body>
 </html>
