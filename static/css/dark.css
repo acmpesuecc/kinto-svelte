@@ -7,24 +7,24 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background-color: #f0f8ff;
+    background-color: #222222;
     font-size: 16px;
     letter-spacing: 1.5px;
-    color: #454849;
+    color: #c8c8c8;
     text-shadow: none;
 }
 
 a {
     text-decoration: none;
-    color: #777;
+    color: #7dc7c7;
 }
 
     a:hover {
-        color: #a3cacc;
+        color: #768787;
     }
 
     a:active {
-        color: #a3cacc;
+        color: #768787;
     }
 
 h3 {
@@ -41,12 +41,12 @@ h5 {
     font-weight: 400;
     margin-bottom: 0px;
     margin-top: 10px;
-    color: #777;
+    color: #bebebe
 }
 
 p {
     font-size: 12px;
-    color: #454849;
+    color: #c8c8c8;
     line-height: 16px;
 }
 
@@ -255,11 +255,11 @@ html {
     opacity: 1;
 }
 
-/* Light mode styles for the minimalistic button */
+/* Dark mode styles for the minimalistic button */
 #toggleDarkMode {
-    background-color: #f5f5f5; 
-    color: #333; 
-    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
@@ -267,5 +267,5 @@ html {
 }
 
 #toggleDarkMode:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
 }

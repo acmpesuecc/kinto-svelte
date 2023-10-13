@@ -1,3 +1,8 @@
+<script>
+
+  import { loop_guard } from "svelte/internal";
+
+</script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -10,6 +15,26 @@
     <title>kinto behr</title>
 </head>
 <body>
+
+    <script>
+        const linkElement = document.getElementById("modeStylesheet");
+        sidebar = localStorage.getItem("darkMode")
+        if (typeof sideBar !== 'undefined' && sideBar !== null){
+            console.log("not")
+        }
+
+        window.onload = function() {
+            if(localStorage.getItem("darkMode") == "Off"){
+                localStorage.setItem("darkMode", "On")
+                linkElement.href = "css/dark.css";
+            }
+        };
+    </script>
+
+    <div>
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
+    </div>
+
     <div class="l-runway d-flex flex-column flex-justify-center">
         <div class="d-flex flex-row flex-start">
             <div class="l-lane d-flex flex-column flex-justify-center">
@@ -23,6 +48,38 @@
         </div>
     </div>
     <script src="fades.js"></script>
+
+    
+
+        <script>
+            function toggleDarkMode() {
+                const body = document.body;
+                body.classList.toggle("dark-mode");
+    
+                const linkElement = document.getElementById("modeStylesheet");
+                if (localStorage.getItem("darkMode") == "Off") {
+                    localStorage.setItem("darkMode", "On")
+                    linkElement.href = "css/dark.css";
+                } else {
+                    localStorage.setItem("darkMode", "Off")
+                    linkElement.href = "css/main.css";
+                }
+            }
+    
+            document.getElementById("toggleDarkMode").addEventListener("click", toggleDarkMode);
+        </script>
+
+    <!-- <script>
+        const linkElement = document.getElementById("modeStylesheet");
+        if(localStorage.getItem("darkMode") == "On"){
+            localStorage.setItem("darkMode", "On")
+            linkElement.href = "css/dark.css";
+        }
+    </script> -->
+    
+
+    <link id="modeStylesheet" rel="stylesheet" type="text/css" href="css/main.css">
+
 </body>
 
 </html>
