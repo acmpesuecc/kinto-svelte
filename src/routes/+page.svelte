@@ -11,7 +11,7 @@
 </head>
 <body>
     <div>
-        <button id="toggleDarkMode">Toggle Theme</button>
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
     </div>
     <div class="l-runway d-flex flex-column flex-justify-center">
         <div class="d-flex flex-row flex-start">
