@@ -11,7 +11,7 @@
 </head>
 <body>
     <div>
-        <button id="toggleDarkMode">Dark Mode</button>
+        <button id="toggleDarkMode">Toggle Theme </button>
     </div>
     <div id="resume_download" class="bottomcorner">
         <a href="latex/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -206,6 +206,8 @@
             </p>
         </div>
     </div>
+    <script src="dark.js"></script>
+
 
     <script>
         function toggleDarkMode() {

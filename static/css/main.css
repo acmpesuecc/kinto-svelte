@@ -254,3 +254,18 @@ html {
     visibility: visible;
     opacity: 1;
 }
+
+/* Light mode styles for the minimalistic button */
+#toggleDarkMode {
+    background-color: #f5f5f5; 
+    color: #333; 
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#toggleDarkMode:hover {
+    background-color: #e0e0e0;
+}
